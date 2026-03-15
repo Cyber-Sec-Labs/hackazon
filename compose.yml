@@ -1,0 +1,10 @@
+services:
+  hackazon:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: cyber-sec-labs/hackazon
+    container_name: hackazon
+    restart: always
+    ports:
+      - "80:80" # Exposed port different than 80 leads to Referer issue
